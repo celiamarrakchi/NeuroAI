@@ -68,8 +68,8 @@ flowchart TD
     J --> L
     K --> L
 
-    L --> M[Final Diagnostic JSON
-(6 Diagnostics)]
+    L --> M[Final Diagnostic JSON<br/>6 Diagnostics]
+
 ```
 
 ---
