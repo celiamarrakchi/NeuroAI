@@ -1,0 +1,46 @@
+# Compatible avec Python 3.10+
+# Installation : pip install -r requirements.txt
+
+# Core Flask
+flask==3.1.2
+flask-cors==6.0.1
+python-dotenv==1.2.1
+werkzeug==3.1.4
+
+# PyTorch (CPU version)
+torch
+torchvision
+torchaudio
+
+# Deep Learning & Vision
+faiss-cpu
+einops
+timm
+opencv-python
+segmentation-models-pytorch
+albumentations
+
+# Database
+pymongo
+
+# Google AI
+google-generativeai
+
+# Groq
+langchain-groq
+
+# LangChain Stack (version 0.2.x with pydantic v1 compatibility)
+pydantic<2
+langchain==0.2.4
+langchain-core==0.2.43
+langchain-google-genai==1.0.10
+langsmith==0.1.147
+
+# Additional dependencies
+scipy
+scikit-image
+scikit-learn
+PyYAML
+requests
+tenacity
+tqdm

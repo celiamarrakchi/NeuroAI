@@ -1,0 +1,66 @@
+{
+  "report_metadata": {
+    "report_id": "BT-13-1764880577",
+    "system_version": "v8.0-modular",
+    "generated_by": "6-Agent Local AI Brain Tumor Triage System",
+    "model": "llama3.1-local",
+    "generated_at": "2025-12-04T21:36:17.000173"
+  },
+  "patient_info": {
+    "patient_id": 13,
+    "age": 25,
+    "sex": "male"
+  },
+  "symptoms_analysis": {
+    "total_symptoms": 8,
+    "active_symptoms": [
+      "vision problems",
+      "seizures",
+      "memory problems",
+      "balance issues",
+      "speech difficulties",
+      "nausea",
+      "vomiting",
+      "weakness"
+    ],
+    "risk_score": 100,
+    "severity_level": "critical",
+    "red_flag_alerts": [
+      "New-onset seizure",
+      "Progressive neurological deficits"
+    ]
+  },
+  "cancer_risk_assessment": {
+    "cancer_probability": 94,
+    "risk_category": "very high",
+    "primary_concerns": [
+      "Brain tumor suspicion"
+    ],
+    "recommended_tests": [
+      "Urgent MRI brain + contrast",
+      "Neurosurgery consult"
+    ]
+  },
+  "explanation": "Here is a rewritten version of the medical report with a warm, empathetic, clear, and professional tone:\n\n**Brain Tumor Risk Assessment Report**\n\nDear [Patient's Name],\n\nI want to start by acknowledging that you've been experiencing some concerning symptoms, and I'm here to guide you through this process. Our assessment has identified several red flags that warrant further investigation.\n\n**Your Symptoms**: You've reported vision problems, seizures, memory issues, balance difficulties, speech challenges, nausea, vomiting, and weakness. These symptoms have led us to assign a **Symptom Risk Score of 100/100**, indicating a critical severity level.\n\nOur analysis suggests that there is a **94% probability** of a brain tumor being present. I want to emphasize that this is not a definitive diagnosis, but rather a strong indication that we need to take further action.\n\n**Primary Clinical Concern**: Our primary concern at this time is the possibility of a brain tumor. We need to investigate this further to determine the best course of treatment.\n\n**Next Steps**: To move forward, I recommend that you undergo an **urgent MRI brain scan with contrast** as soon as possible. Additionally, we'll schedule a consultation with our neurosurgery team to discuss your options and develop a plan for your care.\n\nPlease know that we're here to support you every step of the way. We understand that this news can be unsettling, but we want to assure you that we're committed to providing you with the best possible care.\n\nIf you have any questions or concerns, please don't hesitate to reach out to us. We're here to help.\n\nSincerely,\n[Your Name]",
+  "quality_control": {
+    "system_confidence": "high",
+    "safety_checks_passed": true,
+    "hallucination_check": "passed",
+    "clinical_consistency": "verified",
+    "generated_at": "2025-12-04T21:36:17.000173",
+    "version": "v9.1"
+  },
+  "provenance": [
+    "Evidence search failed — using rule-based assessment."
+  ],
+  "next_steps": {
+    "urgency_level": "IMMEDIATE",
+    "recommended_actions": [
+      "Urgent MRI brain + contrast",
+      "Neurosurgery consult"
+    ],
+    "timeline": "24-48 hours",
+    "escalation": "Neurosurgery"
+  },
+  "generated_at": "2025-12-04T20:36:17.000173Z"
+}

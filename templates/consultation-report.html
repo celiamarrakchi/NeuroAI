@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation Report - NeuroRadiology AI</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+        background: #0f1419;
+        min-height: 100vh;
+        color: #e0e6ed;
+        padding-top: 80px;
+    }
+    nav {
+        background: rgba(20, 25, 35, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 15px 0;
+    }
+    .nav-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+    .logo {
+        font-size: 1.8rem;
+        font-weight: 600;
+        background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        letter-spacing: -0.5px;
+    }
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+    }
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+    }
+    .nav-links a {
+        text-decoration: none;
+        color: #a0aec0;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: color 0.2s ease;
+    }
+    .nav-links a:hover {
+        color: #60a5fa;
+    }
+    .container {
+        max-width: 1400px;
+        margin: 3rem auto;
+        padding: 0 2rem;
+    }
+    .report-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #1a202c;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        overflow: hidden;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    }
+    .report-header {
+        background: #0f1419;
+        color: white;
+        padding: 3rem 2rem;
+        text-align: center;
+    }
+    .report-header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+    }
+    .report-header p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+    .report-actions {
+        padding: 1.5rem 2rem;
+        background: rgba(30, 41, 59, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .btn {
+        padding: 0.875rem 1.75rem;
+        border: none;
+        border-radius: 10px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(96, 165, 250, 0.3);
+    }
+    .btn-primary {
+        background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+        color: white;
+    }
+    .btn-secondary {
+        background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+        color: white;
+    }
+    .report-content {
+        padding: 3rem 2.5rem;
+        line-height: 1.8;
+        color: #e0e6ed;
+    }
+    .report-content h2 {
+        color: #60a5fa;
+        margin: 2rem 0 1rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        border-bottom: 2px solid rgba(96, 165, 250, 0.3);
+        padding-bottom: 0.5rem;
+    }
+    .report-content h3 {
+        color: #93c5fd;
+        margin: 1.5rem 0 0.8rem;
+        font-size: 1.3rem;
+    }
+    .report-content p {
+        margin-bottom: 1.2rem;
+        text-align: justify;
+    }
+    .report-content strong {
+        color: #60a5fa;
+    }
+    .report-content ul, .report-content ol {
+        margin-left: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .report-content li {
+        margin-bottom: 0.5rem;
+    }
+    .risk-badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin: 0.5rem 0;
+    }
+    .risk-VERY-LOW { background: rgba(34, 197, 94, 0.2); color: #6ee7b7; }
+    .risk-LOW { background: rgba(34, 197, 94, 0.15); color: #86efac; }
+    .risk-MODERATE { background: rgba(251, 191, 36, 0.15); color: #fde047; }
+    .risk-HIGH { background: rgba(251, 146, 60, 0.15); color: #fdba74; }
+    .risk-VERY-HIGH, .risk-CRITICAL {
+        background: rgba(239, 68, 68, 0.2);
+        color: #fca5a5;
+        font-size: 1rem;
+        padding: 0.75rem 1.2rem;
+    }
+    .info-box, .warning-box, .critical-box {
+        padding: 1.2rem;
+        margin: 1.5rem 0;
+        border-radius: 12px;
+        border-left: 4px solid;
+    }
+    .info-box {
+        background: rgba(96, 165, 250, 0.1);
+        border-color: #60a5fa;
+    }
+    .warning-box {
+        background: rgba(251, 191, 36, 0.1);
+        border-color: #fbbf24;
+        color: #fde047;
+    }
+    .critical-box {
+        background: rgba(239, 68, 68, 0.15);
+        border-color: #ef4444;
+        color: #fca5a5;
+    }
+
+    @media (max-width: 768px) {
+        .report-header h1 { font-size: 1.8rem; }
+        .report-actions { flex-direction: column; text-align: center; }
+        .report-content { padding: 2rem 1.5rem; }
+    }
+
+    @media print {
+        body { background: white; padding: 0; }
+        nav, .report-actions { display: none !important; }
+        .report-container {
+            box-shadow: none;
+            border: none;
+            border-radius: 0;
+            background: white;
+            color: #000;
+        }
+        .report-content { color: #222; }
+        .report-content h2, .report-content h3, .report-content strong { color: #333 !important; }
+    }
+</style>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <div class="logo-icon">🧠</div>
+                NeuroRadiology AI
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/virtual-consultation">Consultation</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="report-container">
+        <div class="report-header">
+            <h1>📋 Consultation Medical Report</h1>
+            <p>Brain Tumor Risk Assessment</p>
+        </div>
+
+        <div class="report-actions">
+            <div>
+                <strong>Patient ID:</strong> <span id="patientId">-</span><br>
+                <strong>Name:</strong> <span id="patientName">-</span>
+            </div>
+            <div style="display: flex; gap: 10px;">
+                <button class="btn btn-secondary" onclick="window.print()">
+                    📥 Download PDF
+                </button>
+            </div>
+        </div>
+
+        <div class="report-content" id="reportContent">
+            <p style="text-align: center; color: #999; padding: 40px;">
+                Loading report...
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.0.2/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        // Récupérer l'ID patient depuis l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const userId = urlParams.get('user_id');
+
+        if (!userId) {
+            document.getElementById('reportContent').innerHTML = 
+                '<p style="text-align: center; color: red;">❌ No user ID provided</p>';
+        } else {
+            document.getElementById('patientId').textContent = userId;
+            loadReport(userId);
+        }
+
+        async function loadReport(userId) {
+            try {
+                const response = await fetch(`/api/consultation/report/${userId}`);
+                const data = await response.json();
+
+                if (!response.ok || !data.success) {
+                    throw new Error(data.error || 'Failed to load report');
+                }
+
+                // Convertir Markdown en HTML
+                const htmlContent = marked.parse(data.markdown);
+                
+                // Ajouter les badges de risque
+                let styledContent = htmlContent;
+                
+                // Ajouter des classes CSS aux éléments de risque
+                styledContent = styledContent.replace(
+                    /URGENCY LEVEL: (\w+)/gi,
+                    '<div class="critical-box"><strong>🚨 URGENCY LEVEL:</strong> <span class="risk-badge risk-$1">$1</span></div>'
+                );
+
+                const rawName = data.metadata?.patient_info?.name || data.metadata?.patient_name || data.patient?.name || "-";
+                const patientName = typeof rawName === 'string' ? rawName.trim() : rawName;
+                document.getElementById('patientName').textContent = patientName && patientName !== 'unknown' ? patientName : "-";
+
+                // Remplacer les salutations génériques par le nom patient
+                const safePatientName = (patientName && patientName !== '-' && patientName !== 'unknown') ? patientName : 'Patient';
+                styledContent = styledContent
+                    .replace(/Dear\s+\[[^\]]+\],?/gi, `Dear ${safePatientName},`)
+                    .replace(/Dear\s+[A-Za-zÀ-ÖØ-öø-ÿ'’`-]+\s*['’`]?s Family\/Support System,?/gi, `Dear ${safePatientName},`);
+
+                // Nettoyage des signatures "Sincerely" génériques
+                styledContent = styledContent
+                    .replace(/Sincerely,\s*\[[^\]]*Your Name[^\]]*\]\s*[A-Za-zÀ-ÖØ-öø-ÿ'’`-]*'?s Healthcare Team/gi, '')
+                    .replace(/Sincerely,\s*Anis'?s Healthcare Team/gi, '')
+                    .replace(/Sincerely,\s*\[[^\]]*Your Name[^\]]*\]/gi, '')
+                    .replace(/Sincerely,\s*Your Name/gi, '')
+                    .replace(/Sincerely,\s*\[?Your Medical Team\]?/gi, '');
+
+                // Supprimer l'intro automatique "Here is a rewritten version..."
+                styledContent = styledContent.replace(/Here is a rewritten version of the medical report[^<\n]*\n*/i, '');
+
+                // Nettoyer les lignes vides multiples après suppression
+                styledContent = styledContent.replace(/\n{3,}/g, '\n\n');
+
+                // Forcer la signature PDF/print
+                const signatureHtml = '<p style="margin-top: 24px;">Best regards,<br>Data Brain Team</p>';
+                if (/Best regards[^<\n]*\[[^\]]*Your Name[^\]]*\]/i.test(styledContent)) {
+                    styledContent = styledContent.replace(/Best regards[^<\n]*\[[^\]]*Your Name[^\]]*\]/gi, 'Best regards,<br>Data Brain Team');
+                } else if (!/Best regards/i.test(styledContent)) {
+                    styledContent += signatureHtml;
+                }
+
+                document.getElementById('reportContent').innerHTML = styledContent;
+
+            } catch (error) {
+                document.getElementById('reportContent').innerHTML = 
+                    `<p style="text-align: center; color: red;">❌ Error loading report: ${error.message}</p>`;
+            }
+        }
+
+        function downloadPDF() {
+            const element = document.querySelector('.report-container');
+            const opt = {
+                margin: 10,
+                filename: `consultation_report_patient_${userId}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+
+            // Masquer temporairement les boutons
+            const actions = document.querySelector('.report-actions');
+            actions.style.display = 'none';
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                actions.style.display = 'flex';
+            });
+        }
+    </script>
+</body>
+</html>
+

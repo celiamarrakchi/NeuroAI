@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroRadiology AI - Brain Tumor Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index-css.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">🧠</div>
+                NeuroRadiology AI
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#diseases">Diseases</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Advanced Brain Tumor Detection</h1>
+        <p>Deploying cutting-edge AI technology and deep learning models to assist radiologists in accurate brain tumor diagnosis. Our system provides comprehensive analysis for Glioma, Meningioma, Pituitary tumors, and normal brain scans.</p>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="welcome-hero">
+        <div class="welcome-content">
+            <h1>Welcome to NeuroRadiology AI</h1>
+            <p class="welcome-text">
+                Advanced AI-powered brain tumor detection system designed to assist medical professionals in making faster, more accurate diagnostic decisions. Our technology combines cutting-edge machine learning with radiological expertise to support better patient outcomes.
+            </p>
+        </div>
+    </div>
+
+    <!-- Diseases Section -->
+<!-- Diagnostic Capabilities Section -->
+    <section class="conditions-section" id="conditions">
+        <div class="conditions-header">
+            <h2 class="conditions-title">Diagnostic Capabilities</h2>
+            <p class="conditions-subtitle">Our AI system accurately detects and classifies the following brain pathologies</p>
+        </div>
+        
+        <div class="conditions-grid">
+            <article class="condition-card">
+                <div class="condition-indicator glioma"></div>
+                <h3>Glioma</h3>
+                <p>Gliomas originate in glial cells and represent the most common type of primary brain tumor. They range from low-grade to high-grade lesions. Our AI system identifies characteristic imaging patterns including irregular borders, infiltrative growth patterns, and perilesional edema.</p>
+                <ul class="condition-features">
+                    <li>Heterogeneous signal intensity detection</li>
+                    <li>Infiltration boundary analysis</li>
+                    <li>Edema quantification</li>
+                </ul>
+            </article>
+
+            <article class="condition-card">
+                <div class="condition-indicator meningioma"></div>
+                <h3>Meningioma</h3>
+                <p>Meningiomas arise from the dura mater and meningeal layers surrounding the brain and spinal cord. Typically benign and well-demarcated, these extra-axial tumors present characteristic imaging features. Our detection system recognizes dural attachment, well-defined margins, and enhancement patterns.</p>
+                <ul class="condition-features">
+                    <li>Dural tail identification</li>
+                    <li>Boundary definition assessment</li>
+                    <li>Enhancement characterization</li>
+                </ul>
+            </article>
+
+            <article class="condition-card">
+                <div class="condition-indicator pituitary"></div>
+                <h3>Pituitary Adenoma</h3>
+                <p>Pituitary adenomas develop within the pituitary gland at the sella turcica. These tumors can affect hormonal function and compress adjacent structures including the optic chiasm. Our AI analyzes sellar masses and evaluates relationships with surrounding anatomy.</p>
+                <ul class="condition-features">
+                    <li>Sellar mass localization</li>
+                    <li>Suprasellar extension assessment</li>
+                    <li>Compression evaluation</li>
+                </ul>
+            </article>
+
+            <article class="condition-card">
+                <div class="condition-indicator normal"></div>
+                <h3>Normal Imaging</h3>
+                <p>Normal brain imaging demonstrates intact neuroanatomy with no pathological findings. Our system establishes baseline normal patterns and confirms the absence of significant abnormalities, providing diagnostic confidence in negative studies.</p>
+                <ul class="condition-features">
+                    <li>Anatomical integrity verification</li>
+                    <li>Normal pattern establishment</li>
+                    <li>Negative finding confirmation</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <div class="services" id="services">
+        <a href="virtual-consultation" class="service-card">
+            <div class="service-icon">💬</div>
+            <h2>Virtual Consultation</h2>
+            <p>Connect with our AI-powered consultation system for preliminary assessment and guidance on brain tumor concerns.</p>
+            <ul class="service-features">
+                <li>24/7 AI-assisted preliminary screening</li>
+                <li>Symptom analysis and risk assessment</li>
+                <li>Educational resources and information</li>
+                <li>Referral recommendations when needed</li>
+            </ul>
+            <span class="cta-button">Start Consultation →</span>
+        </a>
+
+        <a href="mri-analysis" class="service-card">
+            <div class="service-icon">🔬</div>
+            <h2>MRI Analysis</h2>
+            <p>Upload your brain MRI scans for advanced AI-powered analysis using our state-of-the-art deep learning models.</p>
+            <ul class="service-features">
+                <li>Automated tumor detection and classification</li>
+                <li>Comprehensive radiological reports</li>
+                <li>Region of interest (ROI) identification</li>
+                <li>Comparison with similar reference cases</li>
+            </ul>
+            <span class="cta-button">Upload MRI →</span>
+        </a>
+    </div>
+
+
+
+        <!-- Project Introduction -->
+    <section class="intro-section">
+        <h2 class="intro-title">Our Mission</h2>
+        <div class="intro-grid">
+            <div class="intro-card">
+                <div class="intro-card-icon">👨‍⚕️</div>
+                <h3>For Doctors</h3>
+                <p>Provide radiologists with AI-assisted analysis tools to streamline tumor detection, reduce diagnostic time, and enhance clinical decision-making with high-confidence predictions.</p>
+            </div>
+            <div class="intro-card">
+                <div class="intro-card-icon">👥</div>
+                <h3>For Patients</h3>
+                <p>Enable faster diagnosis and treatment planning through improved accuracy and reduced examination times, leading to better clinical outcomes and peace of mind.</p>
+            </div>
+            <div class="intro-card">
+                <div class="intro-card-icon">🔬</div>
+                <h3>Innovation in Medicine</h3>
+                <p>Bridge the gap between advanced AI technology and clinical practice, setting new standards for diagnostic accuracy and accessibility in neuroradiology.</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Project Description -->
+    <div class="project-description">
+        <h2>About This Project</h2>
+        <p>
+            NeuroRadiology AI represents a comprehensive approach to brain tumor detection using state-of-the-art deep learning models. Our system processes MRI and CT scans to identify, classify, and localize brain tumors with exceptional precision.
+        </p>
+        <p>
+            This project is the result of collaborative research combining expertise in artificial intelligence, medical imaging, and clinical radiology. We aim to democratize access to advanced diagnostic tools while maintaining the highest standards of accuracy and reliability.
+        </p>
+        <p>
+            By leveraging neural networks trained on extensive medical datasets, our platform assists healthcare providers in making informed decisions faster, ultimately improving patient care and outcomes across diverse clinical settings.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="researchers-footer">
+        <div class="researchers-container">
+            <div class="researchers-title">Research & Development Team</div>
+            <div class="researchers-list">
+                <strong>Meriem Khiar</strong> • <strong>Houssem Eddine Ghribi</strong> • <strong>Nedhir Rhimi</strong> • 
+                <strong>Hechmi Ahmadeche</strong> • <strong>Celia Marrakchi</strong> • <strong>Emna Masmoudi</strong>
+            </div>
+            <div class="researchers-affiliation">
+                Part of the <strong>Data Brains</strong> team<br>
+                <a href="#">ESPRIT Engineering School</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

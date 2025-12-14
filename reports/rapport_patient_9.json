@@ -1,0 +1,67 @@
+{
+  "report_metadata": {
+    "report_id": "BT-9-1764719362",
+    "system_version": "v8.0-modular",
+    "generated_by": "6-Agent Local AI Brain Tumor Triage System",
+    "model": "llama3.1-local",
+    "generated_at": "2025-12-03T00:49:22.407853"
+  },
+  "patient_info": {
+    "patient_id": 9,
+    "age": 29,
+    "sex": "male"
+  },
+  "symptoms_analysis": {
+    "total_symptoms": 9,
+    "active_symptoms": [
+      "headache",
+      "memory problems",
+      "balance issues",
+      "seizures",
+      "speech difficulties",
+      "weakness",
+      "vision problems",
+      "nausea",
+      "vomiting"
+    ],
+    "risk_score": 100,
+    "severity_level": "critical",
+    "red_flag_alerts": [
+      "New-onset seizure",
+      "Progressive neurological deficits"
+    ]
+  },
+  "cancer_risk_assessment": {
+    "cancer_probability": 94,
+    "risk_category": "very high",
+    "primary_concerns": [
+      "Brain tumor suspicion"
+    ],
+    "recommended_tests": [
+      "Urgent MRI brain + contrast",
+      "Neurosurgery consult"
+    ]
+  },
+  "explanation": "Here is a rewritten version of the medical report, infused with warmth, empathy, and professionalism:\n\n**Brain Tumor Risk Assessment Report**\n\nDear [Patient's Name],\n\nI want to start by acknowledging that you're going through a very challenging time. Your reported symptoms have raised significant concerns about your health, and I'm here to guide you through this process.\n\n**Your Medical Profile:**\n\n* **Age:** 29\n* **Sex:** Male\n\nYou've been experiencing a range of concerning symptoms, including:\n\n* Headaches\n* Memory problems\n* Balance issues\n* Seizures\n* Speech difficulties\n* Weakness\n* Vision problems\n* Nausea\n* Vomiting\n\nThese symptoms have led to a **Symptom Risk Score** of 100/100, indicating **CRITICAL Severity**. I want to assure you that we're taking your situation very seriously.\n\n**Our Assessment:**\n\nBased on the information provided, our team has estimated that there is a **94%** chance of a brain tumor being present. This is considered a **VERY HIGH Risk**, and we need to take immediate action to confirm this diagnosis.\n\n**Primary Clinical Concern:**\n\nThe primary concern at this time is the suspicion of a brain tumor. I want to reassure you that we're committed to providing you with the best possible care, and we'll work closely with you every step of the way.\n\n**Recommended Next Steps:**\n\nTo further investigate your symptoms and confirm our suspicions, we recommend the following:\n\n* An urgent MRI brain scan with contrast\n* A consultation with a neurosurgeon\n\nPlease know that you're not alone in this journey. We're here to support you, answer any questions you may have, and guide you through each step of the process.\n\nIf you have any concerns or would like to discuss your situation further, please don't hesitate to reach out to us.\n\nSincerely,\n[Your Name]",
+  "quality_control": {
+    "system_confidence": "high",
+    "safety_checks_passed": true,
+    "hallucination_check": "passed",
+    "clinical_consistency": "verified",
+    "generated_at": "2025-12-03T00:49:22.407853",
+    "version": "v9.1"
+  },
+  "provenance": [
+    "Evidence search failed — using rule-based assessment."
+  ],
+  "next_steps": {
+    "urgency_level": "IMMEDIATE",
+    "recommended_actions": [
+      "Urgent MRI brain + contrast",
+      "Neurosurgery consult"
+    ],
+    "timeline": "24-48 hours",
+    "escalation": "Neurosurgery"
+  },
+  "generated_at": "2025-12-02T23:49:22.407853Z"
+}

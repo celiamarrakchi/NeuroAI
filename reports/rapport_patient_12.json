@@ -1,0 +1,67 @@
+{
+  "report_metadata": {
+    "report_id": "BT-12-1764806357",
+    "system_version": "v8.0-modular",
+    "generated_by": "6-Agent Local AI Brain Tumor Triage System",
+    "model": "llama3.1-local",
+    "generated_at": "2025-12-04T00:59:17.548710"
+  },
+  "patient_info": {
+    "patient_id": 12,
+    "age": 20,
+    "sex": "male"
+  },
+  "symptoms_analysis": {
+    "total_symptoms": 9,
+    "active_symptoms": [
+      "nausea",
+      "vision problems",
+      "seizures",
+      "headache",
+      "balance issues",
+      "vomiting",
+      "memory problems",
+      "weakness",
+      "speech difficulties"
+    ],
+    "risk_score": 100,
+    "severity_level": "critical",
+    "red_flag_alerts": [
+      "New-onset seizure",
+      "Progressive neurological deficits"
+    ]
+  },
+  "cancer_risk_assessment": {
+    "cancer_probability": 94,
+    "risk_category": "very high",
+    "primary_concerns": [
+      "Brain tumor suspicion"
+    ],
+    "recommended_tests": [
+      "Urgent MRI brain + contrast",
+      "Neurosurgery consult"
+    ]
+  },
+  "explanation": "Here is a rewritten version of the medical report that conveys empathy, clarity, and professionalism:\n\n**Brain Tumor Risk Assessment Report**\n\nDear [Patient's Name],\n\nWe are writing to share with you the results of your recent evaluation. We understand that this news can be distressing, and we want to assure you that our team is committed to supporting you through this challenging time.\n\nOur assessment indicates that you are experiencing a high level of symptoms, including nausea, vision problems, seizures, headache, balance issues, vomiting, memory problems, weakness, and speech difficulties. These symptoms have been rated as **CRITICAL Severity**, with a Symptom Risk Score of 100/100.\n\nRegrettably, our analysis suggests that the likelihood of a brain tumor is **94%**, which we classify as **VERY HIGH Risk**. We want to emphasize that this risk assessment is based on your reported symptoms and medical history, and further testing will be necessary to confirm or rule out the presence of a tumor.\n\nOur primary concern is the possibility of a brain tumor, and we strongly recommend the following next steps:\n\n* An urgent MRI (Magnetic Resonance Imaging) scan of your brain with contrast dye\n* A consultation with our neurosurgery team to discuss further evaluation and treatment options\n\nPlease know that you are not alone in this journey. Our team is committed to providing you with compassionate care and support throughout the process.\n\nIf you have any questions or concerns, please do not hesitate to reach out to us. We are here to help.\n\nSincerely,\n[Your Name]\n\n**Note:** I've kept all numbers and facts exactly as they were in the original report, while rephrasing the language to be more empathetic and clear.",
+  "quality_control": {
+    "system_confidence": "high",
+    "safety_checks_passed": true,
+    "hallucination_check": "passed",
+    "clinical_consistency": "verified",
+    "generated_at": "2025-12-04T00:59:17.548710",
+    "version": "v9.1"
+  },
+  "provenance": [
+    "Evidence search failed — using rule-based assessment."
+  ],
+  "next_steps": {
+    "urgency_level": "IMMEDIATE",
+    "recommended_actions": [
+      "Urgent MRI brain + contrast",
+      "Neurosurgery consult"
+    ],
+    "timeline": "24-48 hours",
+    "escalation": "Neurosurgery"
+  },
+  "generated_at": "2025-12-03T23:59:17.548710Z"
+}
