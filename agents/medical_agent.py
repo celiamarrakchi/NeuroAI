@@ -604,7 +604,7 @@ def connect_mongodb():
 if __name__ == "__main__":
     
     INDEX_PATH = "brain_tumor_faiss_v3.index"
-    GEMINI_API_KEY = "AIzaSyBbwSneXNfIMszOH-lR5QXeBTcFelyIDoU"
+    GEMINI_API_KEY = ""
     
     print("🔧 Initialisation...\n")
     
