@@ -1,4 +1,4 @@
-# 🧠 NeuroAI – Multi-Agent AI System for Medical Imaging & Virtual Consultation
+# 🧠 NeuroAI –– Multi-Agent AI System for Medical Imaging & Virtual Consultation
 
 NeuroAI is an **agent-based medical AI system** designed to assist in **brain MRI analysis** and **virtual patient consultation**. The project combines **computer vision**, **multi-agent orchestration**, **LLMs**, **XAI**, and **RAG** to generate **structured medical reports** in JSON and PDF formats.
 
